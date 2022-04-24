@@ -1,5 +1,911 @@
 # Change log
 
+## 7.0.1
+
+### New Features
+
+#### Spreadsheet Editor
+
+* `French (Switzerland)` regional setting (Bug #53978)
+
+### Fixes
+
+#### All Editors
+
+* Fix problem with broken `About` customization (Bug #55647)
+
+#### Document Editor
+
+* Fix changes in text position (Bug #54485)
+* Fix JS error while changing font in some files (Bug #55280)
+* Fix the problem with calculating the position
+  of flow objects lying in a table cell (Bug #51933)
+* Fix the problem with calculating the position of
+  a drawing object in the header (Bug #55398)
+* Fix the problem with calculating header/footer.
+  Forbid to change the page number of a header
+  when calculation in progress (Bug #55403)
+* Fix the problem with calculating the position
+  of a drawing lying in a table cell
+  with vertical alignment to the bottom or center (Bug #55406)
+* Fix the problem with calculating page count stage (Bug #55458)
+* Fix the problem with text position calculation for rotated table cells (Bug #54200)
+* Fix `Shift + (` shortcut (Bug #55356)
+
+#### Spreadsheet Editor
+
+* Fix opening protected workbook in Excel (Bug #55027)
+* Fix JS error while Find and Replace empty cell (Bug #54999)
+* Fix compatibility of some files with Excel (Bug #54956)
+
+#### Presentation Editor
+
+* Fix shape position in slideshow mode (Bug #55068)
+
+#### Forms
+
+* Fix problem with license end (Bug #54910)
+* Fix problem float characters limit (Bug #55410)
+
+#### Mobile Editor
+
+* Fix print and download permission problems (Bug #55043)
+
+#### Back End
+
+* Fix Remote Code Execution (Bug #54819)
+
+#### Package
+
+* Fix `rpm` update with some custom `local.json` values (Bug #50603)
+
+## 7.0.0
+
+### New Features
+
+#### All Editors
+
+* New sort types for Comment left sidebar
+* Ability to call menu entries by pressing `alt+key`
+* New canvas zoom options (up to 500%)
+* Ability to customize dark menu logo from API
+
+#### Document Editors
+
+* Ability to add Content Controls and
+  use File Comparison is available in OpenSource version
+* Completely new mode for creating, filling and sharing forms
+* Dark Mode (dark canvas background and other interface changes)
+* New settings to change review mode `Track Changes Display`
+* Ability to select local file for `Mail Merge`
+* New setting for AutoFormat as you type -> hyperlinks and network paths
+
+#### Spreadsheet Editor
+
+* Version History
+* Ability to use Sheet Views is available in OpenSource version
+* Ability to protect spreadsheet files and separate sheets
+* Ability to show other users cursor in co-edit mode
+* Ability to separate sheets and status bar
+* `pt-br` formulas description and translation
+* Do not loose Query Table data
+* Copy sheet with drag-n-drop with holding `ctrl`
+
+#### Presentation Editors
+
+* Ability to display animations
+* Slide animation settings moved to top Tab
+* New setting for AutoFormat as you type -> hyperlinks and network paths
+* Ability to save presentation to `BMP` and `PNG`
+
+### Fixes
+
+* All components received countless fixes
+
+## 6.4.2
+
+### Fixes
+
+#### All Editors
+
+* Fix JS errors while copy chart from Document Editor
+  to Presentation Editor (Bug #52844)
+* Fix `htmlutils.js` not found for `toolbarNoTabs` option (Bug #52849)([DocumentServer#1445](https://github.com/ONLYOFFICE/DocumentServer/issues/1445))
+
+#### Documents Editor
+
+* Fix JS error while comparing some specific docx files (Bug #52909)
+* Fix JS error while undo in compare mode (Bug #52865)
+
+#### Spreadsheet Editor
+
+* Fix lost gradient in some files (Bug #52801)
+
+#### Integration Example
+
+* Major updates in all components
+* Fix some issues in `WOPI` view
+
+## 6.4.1
+
+### New Features
+
+#### Viewers
+
+* Support of `oxps` file format on view
+
+### Fixes
+
+#### All Editors
+
+* Major improvements in setting East Asia font names in interface
+* Fix several issues with 125% and 175% scales (Bug #51946, Bug #49877,
+  Bug #52329, Bug #52486, Bug #50724, Bug #52486)
+* Fix IE11 problem (Bug #52520)
+
+#### Document Editor
+
+* Fix `To next change` problem in Simple Markup (Bug #52204)
+* Fix problem selecting table in specific docx (Bug #52239)
+* Fix delimiter while insert cross-reference (Bug #51827)
+* Fix JS error for convert table to text for specific docx (Bug #52229)
+* Add some exceptions for auto-capitalization (Bug #52357)
+* Fix table border while saving PDF (Bug #52223)
+* Fix cell spacing in some specific docx (Bug #52435)
+* Fix table position for specific docx (Bug #52468)
+* Fix non-empty changes set for empty document (Bug #52556)
+* Fix page number position for specific document (Bug #52470)
+* Fix lost space symbol while inserting text (Bug #52070)
+* Fix convert to table single line (Bug #52603)
+* Fix JS error while opening some specific docx (Bug #52697)
+* Fix issues with dark theme and `New style from selection` (Bug #52672)
+
+#### Spreadsheet Editor
+
+* Fix problem with headers print (Bug #52231)
+* Fix memory leak in specific xlsx (Bug #52270)
+* Fix chart legend for specific xlsx (Bug #52118)
+* Fix changing item to percent conditional formatting (Bug #52189)
+* Fix deleting dropdown while using Clear All (Bug #44855)
+* Fix maximum call stack error for chart for whole column (Bug #52551)
+
+#### Presentation Editor
+
+* Fix JS error while duplicate slide (Bug #52550)([DocumentServer#1423](https://github.com/ONLYOFFICE/DocumentServer/issues/1423))
+* Fix chart style select (Bug #52113)
+
+#### Back End
+
+* Major redone of `AllFontsGen` for better support CJK fonts
+* Fix `logrotate` config (Bug #49523)
+* WOPI is disabled by default
+
+#### x2t
+
+* Fix `Date` conditional formatting when saving as ODS (Bug #51935)
+* Fix convert text to table borders in specific file (Bug #52159)
+* Fix conditional formatting with Begins with while saving to ODS (Bug #51937)
+* Fix broken pptx file after convert from ppt (Bug #52191)
+* Fix page color while converting rtf to docx (Bug #50003)
+* Fix convert docx to odt for specific files (Bug #52240)
+* Fix convert failure for specific pptx file (Bug #52259)
+* Fix image loss while docx -> rtf convert (Bug #52395)
+* Fix broken docx file after doc -> docx convert (Bug #52607)
+
+#### Mobile web editors
+
+* Fix locked cell names (Bug #52308)
+* Fix memory leak for specific docx file (Bug #52137)
+* Fix text input in emulator (Bug #52371)
+* Fix text selection in some specific cases (Bug #51121)
+* Fix context menu flickering (Bug #52512)
+
+#### Integration Example
+
+* Nodejs: Fix support of IE11
+* Add support of oxps files
+* Actualize sample templates
+* Fix nodejs example on custom port (Bug #50977)(Bug #52552)
+
+#### plugins
+
+* Actualize `macros` plugin libraries
+* Fix language select for `translate` plugin
+
+#### Docker
+
+* New `WOPI_ENABLED` environment variable
+
+## 6.4.0
+
+### New Features
+
+### All Editors
+
+* Add support of Web Application Open Platform Interface (WOPI) protocol
+* Major improvements in support of chart styles
+* Ability to Resolve all comments
+* Change list symbols render
+* Add chart styles for users with visual impairment
+* Add ability to use tab\shift+tab in some controls
+* Add 125% and 175% interface scale
+* Ability to set theme by config
+* Ability to set user permissions for comment mode
+* Ability to view unique user link count on info page
+* Ability to force co-edit mode via config
+* Improved render of CJK fonts in PDF files
+
+### Document Editor
+
+* Ability to convert text to table
+* Ability to convert table to text
+* Auto-capitalize first letter
+* New review mode: Simple markup
+
+### Spreadsheet Editor
+
+* Ability to add/remove/edit conditional formatting
+* Ability to add sparklines
+* Change select by pressing `tab` + `enter`
+* Data import from txt, csv
+* Ability to run macros on mouse click over graphic object
+* A lot new languages for formulas description (Belarusian, Bulgarian,
+  Catalan, Chinese, Czech, Danish, Dutch, Finnish, Greek,
+  Hungarian, Indonesian, Japanese, Korean, Lao, Latvian,
+  Norwegian, Polish, Portuguese, Romanian, Slovak,
+  Slovenian, Swedish, Turkish, Ukrainian, Vietnamese)
+* Add setting for hyperlink auto-correction
+* Freeze panes presets
+* Setting for `show zeros` in cells
+* Chain comments support
+* Add argument names to function wizard
+
+#### Presentation Editor
+
+* Version History
+* Ability to hide notes panel
+* Auto-capitalize first letter
+
+#### Mobile Editors
+
+* Mobile web editors completely rewritten on React
+
+### Fixes
+
+* All components received countless fixes
+
+## 6.3.2
+
+### Fixes
+
+#### Document Editor
+
+* Fix display data in `Navigation` panel (Bug #51297)([DocumentServer#1368](https://github.com/ONLYOFFICE/DocumentServer/issues/1368))
+
+## 6.3.1
+
+### New Features
+
+#### Back End
+
+* Add 'license' command to CommandService.ashx
+
+### Fixes
+
+#### All Editors
+
+* Fix fonts in Help entries (Bug #50473)
+* Fix several issues related to Dark Theme (Bugs #50284, #50416, #50459, #50656)
+
+#### Document Editor
+
+* Fix opening files with broken `en-ZA` dict (Bug #50471)
+* Fix hieroglyph rotation in 150% zoom (Bug #50482)
+* Fix file password reset for `Mail Merge` (Bug #50474)
+* Fix applying changes in some specific file (Bug #50604)
+* Fix parser error for files with continuous space in name (Bug #50466)
+* Fix opening documents with deleting password (Bug #50481)
+* Fix document print after adding password (Bug #49716)
+
+#### Spreadsheet Editor
+
+* Fix JS error while opening xlsx file (Bug #50509)
+* Fix Format as Table in specific file (Bug #50489)
+* Fix inserting line in specific file (Bug #50521)
+* Fix unnecessary memory consumption in pivot tables
+* Fix incorrect `IF` formula calculation (Bug #50549)
+* Fix JS error while changing zoom while editing cell (Bug #50642)
+* Escape sheet name for regexp on changing sheet name or on deleting sheets
+* Fix losses ole-objects on opening
+
+#### Presentation Editor
+
+* Fix table templates preview on different scales (Bug #50446)
+* Fix JS error while changing specific shape (Bug #50607)
+* Fix theme preview for small size windows (Bug #50578)
+
+#### build_tools
+
+* Fix build on Debian 10 and all actual versions of Ubuntu
+* Fix config location and port for running compiled DocumentServer
+
+#### x2t
+
+* Fix ppt => pptx convert (Bug #50383)
+* Fix cell color for xls => xlsx convert (Bug #46852)
+* Fix missing data in xls (Bug #50426)
+* Fix empty rtf file (Bug #50434)
+
+#### Plugins
+
+* Adapt `Marcos` plugin for dark theme (Bug #49768)
+
+## 6.3.0
+
+### New Features
+
+#### All Editors
+
+* Interface Themes support
+* 150% interface scaling support
+* Spellchecker implemented as SharedWorker. No more back-end service for spellchecker
+* Ability to add file to favorites (must be supported on DMS side)
+* Password protection support
+* New chart types (lines and scatter)
+* Ability to setup anonymous user name
+* Check hyperlinks for 2083 symbol length
+* Ability to print files in Firefox
+* Macros methods tooltips
+
+#### Document Editor
+
+* Wrapping for shapes in Top Toolbar
+* Indents settings in Paragraph Right Sidebar
+* Change Register operation in Top Toolbar
+* Change List Level operation
+* Track changes mode redone, ability to save it to file
+* Export to html, fb2, ePub
+
+#### Spreadsheet Editor
+
+* Add new chart type - combo
+* Redone Chart Advanced Setting with more axis settings
+* Add ability to set axis label format
+* New date format "YYYY-MM-DD" (ISO 8601)
+* Cell Indent setting in Table Right Sidebar
+* Opening of Microsoft Office XML 2003 files
+* Group and Ungroup operation for Pivot Tables
+* XLOOKUP function
+
+#### Presentation Editor
+
+* Slide opacity setting
+* Setup columns in shape via Top Toolbar
+* Presentation Animations are saved after export from our editor
+
+### Fixes
+
+* All components received countless fixes
+
+## 6.2.2
+
+### Fixes
+
+#### Server
+
+* Remove ability to execute DocumentBuilder scripts from Editors
+* Fix vulnerability with 'insert image from url' and 'compare document from url`
+
+#### x2t
+
+* Fix convert time for specific document (Bug #49434)
+* Fix broken pptx file after open in Presentation Editor (Bug #49429, #49202)
+
+#### Docker
+
+* Fix instruction for using Let's Encrypt ([Docker-DocumentServer#349](https://github.com/ONLYOFFICE/Docker-DocumentServer/issues/349))
+
+## 6.2.1
+
+### Fixes
+
+#### Document Editor
+
+* Fix data loss after opening document reviewed by user (Bug #48920)
+  ([DocumentServer#1159](https://github.com/ONLYOFFICE/DocumentServer/issues/1159))
+* Fix JS error while entering text after cursor mouse move (Bug #49090)
+* Fix opening docx file with chart in MS Office (Bug #49219)
+
+#### Spreadsheet Editor
+
+* Fix copy from Document to Spreadsheet (Bug #49013)
+
+#### Presentation Editor
+
+* Fix broken PPTX while opening in Microsoft PowerPoint (Bug #49258)([DocumentServer#1191](https://github.com/ONLYOFFICE/DocumentServer/issues/1191))
+
+#### Integration
+
+* Fix missing plugin tab (Bug #49007)
+
+## 6.2.0
+
+### New Features
+
+#### All Editors
+
+* Ability to use Tab/Shift+Tab in some dialog windows
+* Change color of loader to darker one
+* Ability to setup font size 300pt (409pt for Spreadsheets)
+* New translation to Belarusian, Catalan, Greek, Lao, Romanian
+* Beta versions has new `beta` mark in left toolbar
+
+#### Document Editor
+
+* Ability to insert Table of Figures
+
+#### Spreadsheet Editor
+
+* Ability to insert slicers in pivot tables
+* Data Validation settings
+* Ability to cancel auto-expansion of tables
+* Support of custom number format
+* `GROWTH`, `TREND`, `LOGEST`, `UNIQUE`, `RANDARRAY` functions support
+
+#### Presentation Editor
+
+* Ability to setup auto-format as you type
+* Buttons for increase-decrease font size
+
+#### Back-end
+
+* Mark person clicking the force-save button as file author
+
+### Fixes
+
+* All components received countless fixes
+
+## 6.1.1
+
+### Fixes
+
+#### All Editors
+
+* Fix display units `none` for chart (Bug #43017)
+* Show custom message for protected files
+
+#### Document Editor
+
+* Fix JS error while clicking on table in specific docx (Bug #47871)
+* Fix JS error while pressing Escape adding free form line (Bug #47958)
+* Fix opening `Mail Merge` specific file  (Bug #47747)
+
+#### Spreadsheet Editor
+
+* Fix JS error while clicking on link in shape (Bug #47864)
+* Fix translate for Freeze Pane Shadows (Bug #47739)
+
+#### Mobile Editors
+
+* Fix error while showing comment (Bug #47765)
+
+#### Server
+
+* Fix missing `/info` page (Bug #47819)
+* Fix ??? symbols in chinese fonts (Bug #47995)([DocumentServer#1099](https://github.com/ONLYOFFICE/DocumentServer/issues/1099))
+
+#### Installation
+
+* Once again fix problem with DB clean
+  (`onlyoffice-documentserver.postinst: 124: [: false: unexpected operator`)
+  ([DocumentServer#1043](https://github.com/ONLYOFFICE/DocumentServer/issues/1043))
+  ([DocumentServer#1088](https://github.com/ONLYOFFICE/DocumentServer/issues/1088))
+
+#### x2t
+
+* Fix problem detecting fodt, fods, fodp files (Bug #47775)
+* Fix saving image placeholder to odt (Bug #47278)
+* Fix saving file with image name to odt (Bug #47638)
+* Fix opening link in specific doc file (Bug #47574)
+
+#### ePub
+
+* Fix `%20` symbol in some ePub files
+
+#### Plugins
+
+* Fix plugin custom width (Bug #47845)
+* Fix translator plugin for IE11 (Bug #47773)
+* New icons for translator plugin
+
+## 6.1.0
+
+### New Features
+
+#### All Editors
+
+* Complete redone html-based formats (`ePub`, `mht`, `html`)
+* `fb2` format can be opened in viewer
+* Redone gradient control and ability to set custom angle for gradient fill
+* New icons in context menu
+* Add support of AutoFormat as you type
+* Apply button in File menu always visible
+* Ability to copy comment from left sidebar
+
+#### Document Editor
+
+* Ability to show line numbering
+* Ability to add cross-reference
+* Add support of endnotes
+* Ability to edit AutoCorrect list
+* Add ability to set review permissions by groups
+* Select Data button in Chart Editor
+
+#### Spreadsheet Editor
+
+* Ability to work with sheet view (available only for paid version)
+* Support of editing data ranges in Chart
+* Redone cell editor height change
+* New cursor for column\row hover
+* Ability to hide freeze pane shadow
+* Pivot Table can be inserted from `Insert` tab
+
+#### Plugins
+
+* Translate plugin uses Google Translate, instead of Yandex
+* Add ability to add help to plugin
+
+#### Embedded Viewer
+
+* Print button in Embedded viewer
+* Removed deprecated Google+ share
+
+### Fixes
+
+* All components received countless fixes
+
+#### Back-end
+
+* `ttf-mscorefonts-installer` is now optional dependency.
+
+## 6.0.2
+
+### New Features
+
+#### Integration Example
+
+* Integration example now included in open-source version
+
+### Fixes
+
+#### All Editors
+
+* Fix problem with insert BMP image in doc (Bug #47276)
+
+#### Installation
+
+* Fix problem with DB clean
+  (`onlyoffice-documentserver.postinst: 124: [: false: unexpected operator`)
+  ([DocumentServer#1043](https://github.com/ONLYOFFICE/DocumentServer/issues/1043))
+
+#### Back end
+
+* Fix some issue with PostgreSQL before 9.5 (bug #45406)
+
+## 6.0.1
+
+### Fixes
+
+#### All Editors
+
+* Actualize Help
+
+#### Document Editor
+
+* Fix losing comments added to docx (Bug #46770)
+
+#### Spreadsheet Editor
+
+* Fix pivot refresh in R1C1 (Bug #46052)
+
+#### Convert
+
+* Fix error while opening specific xls (Bug #46728)
+
+#### Back-end
+
+* Fix several vulnerabilities
+* Fix CVE-2021-25832
+* Fix Path Traversal vulnerability via `download as` params
+* Fix ER_DATA_TOO_LONG: Data too long for column 'callback' at row 1
+* Fix problem with generating new presentation theme (Bug #46754)
+
+#### Installation
+
+* Fix cluster mode setup
+
+## 6.0.0
+
+### New Features
+
+#### All Editors
+
+* Autofit settings for shape
+* Ability to insert special characters
+* Autorun settings for macros
+* Selecting an image from storage for watermarks, shapes and slides filling
+* Added an AutoCorrect list
+* Redesign of color selection component
+* Ability to change a position and size of chart elements
+* Hotkey Ctrl + 0 for zoom resetting
+* Changed a behavior of hiding icons in tabs when editor window is reducing
+
+#### Document Editor
+
+* Ability to insert date and time
+* Ability to print selection in view mode
+* Converting an equation from old formats
+* Changed placeholder for content controls
+* Redone the algorithm the justifying of a paragraph with condensing spaces
+
+#### Spreadsheet Editor
+
+* Full support of pivot tables
+* Autofilter settings in pivot tables
+* Support of open all existing in file conditions for data bar conditional formatting
+* Support of open all existing in file gradients for data bar conditional formatting
+* Full support of slicers for format tables
+* Special paste settings
+* Ability to move a sheet from one workbook to another
+* Internal link to named range
+* Print titles
+* New component for cells selection
+* Ability to remove duplicate values
+* Ability to insert function via Function Arguments dialogue
+* Wrap Text and Shrink to Fit settings in right toolbar
+* Vertical Text option in text orientation settings
+* Ability to change the function in Total Row for formatted table
+* Delimiter settings for Special Paste and Text to Columns dialogue
+* LINEST function
+* Hotkeys Ctrl+Shift+'Plus sign' and Ctrl+Shift+'Minus sign' for date and time insertion
+* Hotkey Shift+F3 for a function insertion
+* Status bar settings
+* New mouse actions for work with format tables
+
+#### Presentation Editor
+
+* Changed interface for internal link
+* Ability to print selection in view mode
+* Redesign of bullet and numbering list menu
+
+#### Mobile Editors
+
+* Ability to insert a comment
+* View and edit the comment from context menu or Collaboration tab
+* Text Orientation in Edit Cell settings
+* Autorun settings for macros
+* Redesign of the tabs
+
+#### Back-end
+
+* Check licensed number of editor connections for cluster
+* Do not start force save for encrypted files
+* Fixed insert jpeg images in encrypted files
+
+### Fixes
+
+* All components received countless fixes
+
+## 5.6.5
+
+### New Features
+
+#### document-server-integration
+
+* Uses `Apache` license instead of `MIT`
+
+### Fixes
+
+#### x2t
+
+* Fix `SIGABR` on ODT color (Bug #46499)([DocumentServer#989](https://github.com/ONLYOFFICE/DocumentServer/issues/989))
+
+#### Back End
+
+* Fix connecting document server with MySQL to community server
+
+#### Package
+
+* Fix package type in info.json for `documentserver-ee` and `documentserver-ie`
+
+## 5.6.4
+
+### Fixes
+
+#### Convert
+
+* Fix several vulnerabilities in `x2t` (Bug #46348, Bug #46352, Bug #46353,
+  Bug #46384, Bug #46434, Bug #46436) (CVE-2021-25831, CVE-2021-25829, CVE-2021-25830)
+* Fix vulnerability in TXT converter (Bug #46437)
+
+## 5.6.3
+
+### Fixes
+
+#### Back-end
+
+* Fix Path Traversal vulnerability via image upload params (Bug #46113)(CVE-2021-3199)
+
+## 5.6.2
+
+### Fixes
+
+#### Back-end
+
+* Fix Path Traversal vulnerability via `savefile` param (Bug #46037)
+
+## 5.6.1
+
+### Fixes
+
+#### Back-end
+
+* Fix Path Traversal vulnerability via Convert Service param (Bug #45976)(CVE-2021-25833)
+
+#### Docker
+
+* Fix `!=: unary operator expected` while starting
+  `onlyoffice/documentserver` (Bug #45985)
+
+## 5.6.0
+
+*From this release we changing numbering scheme of DocumentServer.*  
+*This is a bugfix release.*  
+*Next major release with a bunch of new features will be 6.0.0*  
+
+### Fixes
+
+#### All Editors
+
+* Fix problems with Auto-Color of shapes
+* Fix problems with copy-paste images
+* German, French, Italian, Portuguese and Russian translations improvements.
+
+#### Document Editor
+
+* Fix bug with bookmark opening
+* Fix bug resetting comment GUID while opening
+* Fix wrong `undo`/`redo` state for `comparing` mode
+* Fixed in issue with auto-color feature for graphical
+  objects in some DOCX user files (Bug #45460)
+* Fixed an issue with increasing font size in some DOCX user files (Bug #44852)
+* Fixed incorrect displaying of some PDF user files
+  (Bug #45336, Bug #39097, Bug #19078)
+* Fixed incorrect displaying of watermark on CJK languages (Bug #45886)
+* Fixed an export of some DOCX user files to PDF (Bug #45319)
+
+#### Spreadsheet Editor
+
+* Fixed invalid icon in cells border menu (Bug #45910)
+* Fixed an error with copy and past format table in some XLSX files (Bug #45731)
+* Fixed an error with format table creation in some XLSX files (Bug #45773)
+* Fixed an error with entering big data in last partially view cell (Bug #45653)([DocumentServer#903](https://github.com/ONLYOFFICE/DocumentServer/issues/903))
+
+#### Presentation Editor
+
+* Fix `List Settings` window on German (Bug #45417)
+
+#### Mobile Editors
+
+* Fixed an issue with text selection on iOS devices (Bug #45844)
+* Fixed an error while presentation slides are swiping (Bug #42758)([DocumentServer#923](https://github.com/ONLYOFFICE/DocumentServer/issues/923))
+* Fixed an appearance of first slide creating after theme was changed (Bug #45610)
+
+#### Back-end
+
+* Remove `redis` as dependency for Community Edition
+  (it was not used, but required to install)
+* Fix logrotate command for Fedora-based Linux ([DocumentServer#902](https://github.com/ONLYOFFICE/DocumentServer/issues/902))
+* JWT: Fix uploading encrypted image
+* Fixed an issue with saving intermediate version while document
+  is opened for view another user (Bug #45406)
+* Fix unexpected commands in collaboration editing
+* Fix sending Redis custom option (Commercial Version Only) ([DocumentServer#764](https://github.com/ONLYOFFICE/DocumentServer/issues/764))
+* Changed a messages in license exceeding windows (Bug #45819)
+* Fixed an conversion error while opening ePub and HTML files on CentOS 7 (Bug #31323).
+* Fixed deb package `postinstall` typo.
+* Removed unused `Microsoft Visual C++ 2010 Redistributable`
+  dependency for Windows
+
+#### Plugins
+
+* Fix `GetCurrentContentControlPr` method
+
+#### x2t
+
+* Fix missing page numbers for rtf -> docx (Bug #45439)
+* Fixed an issue with increasing font size in some RTF user files (Bug #45439).
+* Fix table width for rtf -> docx (Bug #45477)
+
+## 5.5.3
+
+### New Features
+
+#### All Editors
+
+* Added skeleton loader in embedded viewer
+
+#### Document Editor
+
+* Added Mendeley and Zotero plugins
+* Ability to add several table rows/columns (Bug #20179)
+
+#### Back-end
+
+* Added JSON logger
+* New options: `sslEnabled` and `s3ForcePathStyle`
+* Added pgPoolExtraOptions (connection options)
+* Reduced fonts cache size for AllFontsGen working
+
+### Fixes
+
+#### All Editors
+
+* Fixed crash while writing a chart with equations in title/axis.
+* Fixed an XSS injection in macros names (Bug 45345)
+
+#### Document Editor
+
+* Fixed an editor crashing after adding new rows in table
+  in collaborative editing (Bug #45144)
+* Fixed an editor crashing after searching and replacing
+  in some DOCX files (Bug #45252)
+* Fixed displaying of some DOCX files (Bug #44975, Bug #45204)
+* Fixed displaying of some RTF files (Bug #45122)
+* Fixed scrolling to bookmark in some corrupted DOCX files (Bug #45391)
+
+#### Spreadsheet Editor
+
+* Data validation fixes and improvements.
+* Fixed a crash on opening some XLSX files (Bug #45093, [Documentserver#833](https://github.com/ONLYOFFICE/DocumentServer/issues/833))
+* Fixed filling cells with formula in R1C1 mode (Bug #44730)
+* Fixed recalculating formulas in some XLSX files (Bug #45368)
+* Fixed XSS injection in data validation tip (Bug #45112)
+* Fixed a crash with edit type of cells filling (Bug #45394)
+* Fix some missed icons (Bug #45276)
+
+#### Mobile Editors
+
+* Font picker refactoring
+
+#### Back-end
+
+* Fixed missed require `util` in logger
+* Fixed wrong callbackUrl after updating DS without dropping DB
+* Fix security problem with JWT token when uploading image
+
+#### x2t
+
+* Fixed an issue with wrong encode of some CSV files (Bug #45171).
+* Fixed converting some DOCX files (Bug #44709)
+* Fixed converting some RTF files (Bug #45150, Bug #45166, Bug #45195)
+* Fixed security issue with builder and working with local files
+* Fixed writing corrupted DOCX file with chart in group shape
+
+#### Package
+
+* Use dropping tables instead drop databases database in deb `postrm` scrip
+* Replace `wget` with `curl` for prepare4shutdown (Bug #45264)
+* Fix security issues with accessing info page (Bug #45295)
+
+#### Plugins
+
+* Add and fix translations in macros plugin
+
+## 5.5.2
+
+### No public release
+
 ## 5.5.1
 
 ### New features
@@ -67,6 +973,7 @@
 
 #### Document Editor
 
+* Ability to compare documents (available only for paid version)
 * Adding content control (available only for paid version)
 * Ability to remove table cells
 * Ability to insert several rows\columns
@@ -106,7 +1013,7 @@
 
 #### Package
 
-* Remove `nodejs` dependency
+* Remove `nodejs` dependency. Each service now is a single binary.
 
 #### Docker
 
@@ -115,6 +1022,8 @@
 #### Server
 
 * Ability to convert to `PDF\A` via ConvertService
+* Redis is not required for `onlyoffice-documentserver` (OpenSource version)
+* `gc` service is now part of `docservice`
 
 ### Fixes
 
